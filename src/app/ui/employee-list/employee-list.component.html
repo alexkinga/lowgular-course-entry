@@ -1,4 +1,6 @@
 <h1>Employee list</h1>
+<h2>{{title}}</h2>
+<!--async dane sa pobierane asynchronicznie z internetu-->
 <ul *ngIf="data$ | async as data; else empty">
   <li *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}. Email: {{employee.email}}</li>
 </ul>

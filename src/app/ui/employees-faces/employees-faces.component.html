@@ -1,0 +1,10 @@
+<h1>Faces</h1>
+<ul *ngIf="data$ | async as data; else empty">
+  <div class="row">
+    <div class="column" *ngFor="let employee of data">
+      <img style="width: 100%" src="{{employee.image}}">
+        <span>{{employee.name}}</span>
+    </div>
+  </div>
+</ul>
+<ng-template #empty> There is no data </ng-template>
