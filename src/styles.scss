@@ -3,4 +3,10 @@
   float: left;
   width: 30%;
   padding: 5px;
+  display: inline-block;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
