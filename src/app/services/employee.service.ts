@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {map, Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { PersonModel } from '../model/person.model';
 import { CreateEmployeeModel } from '../model/create-employee.model';
-import {EmployeeModel} from "../model/employee.model";
 
 @Injectable()
 export class EmployeeService {
@@ -16,6 +15,10 @@ export class EmployeeService {
   //created with lowgular
   create(employee: CreateEmployeeModel): Observable<any> {
     return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee);
+  }
+
+  delete(id: string): Observable<void> {
+    return this._httpClient.delete<void>('https://dummy.restapiexample.com/api/v1/delete/' + id);
   }
 
   // create(employee: CreateEmployeeModel): Observable<any> {
