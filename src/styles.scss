@@ -10,3 +10,8 @@
   clear: both;
   display: table;
 }
+#footer {
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
+}
